@@ -153,12 +153,5 @@
 			</div>
 		</div>
 
-		<div class=" w-full" in:fade={{ duration: 200, delay: 300 }}>
-			<Suggestions
-				className="grid grid-cols-2"
-				suggestionPrompts={selectedSuggestionPrompts}
-				{onSelect}
-			/>
-		</div>
 	</div>
 {/key}
