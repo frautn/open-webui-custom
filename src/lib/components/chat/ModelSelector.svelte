@@ -60,33 +60,4 @@
 	}
 </script>
 
-<div class="flex min-w-0 max-w-full flex-col items-start">
-	<div class="flex min-w-0 max-w-full">
-		<div class="min-w-0 max-w-full overflow-hidden">
-			<div class="min-w-0 max-w-full">
-				<Selector
-					bind:this={selector}
-					id="model"
-					placeholder={$i18n.t('Select a model')}
-					items={$models.map((model) => ({
-						value: model.id,
-						label: resolveLocalizedModelName(model, $i18n.language),
-						model: model
-					}))}
-					{pinModelHandler}
-					{className}
-					{triggerClassName}
-					{placement}
-					{align}
-					{showSetDefault}
-					onSetDefault={saveDefaultModel}
-					multipleEnabled={$user?.role === 'admin' ||
-						($user?.permissions?.chat?.multiple_models ?? true)}
-					{disabled}
-					bind:compareEnabled={compareModels}
-					bind:values={selectedModels}
-				/>
-			</div>
-		</div>
-	</div>
-</div>
+

@@ -20,7 +20,6 @@
 	export let onCompact: () => void = () => {};
 	export let onStatus: () => void = () => {};
 	export let onFork: () => void = () => {};
-	export let onModel: () => void = () => {};
 	export let onSettings: () => void = () => {};
 	export let onTemporary: () => void = () => {};
 	export let onCreateSkill: () => void = () => {};
@@ -126,9 +125,6 @@
 						} else if (type === 'command' && data.id === 'fork') {
 							command({ id: data.id, label: data.id });
 							onFork();
-						} else if (type === 'command' && data.id === 'model') {
-							command({ id: data.id, label: data.id });
-							onModel();
 						} else if (type === 'command' && data.id === 'settings') {
 							command({ id: data.id, label: data.id });
 							onSettings();
