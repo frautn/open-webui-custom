@@ -495,7 +495,6 @@
 			{#if !['user', 'admin'].includes($user?.role)}
 				<AccountPending />
 			{:else}
-				<Sidebar />
 
 				{#if loaded}
 					<main class="contents">
